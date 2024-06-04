@@ -1,4 +1,8 @@
-main {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   width: 100%;
   margin: auto;
 }
@@ -8,9 +12,6 @@ header {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 
   width: 100%;
   top: 0;
@@ -37,70 +38,75 @@ header.small {
 
 nav ul {
   list-style-type: none;
-  margin: 0 3rem 0 0;
-  padding: 0rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* margin: 0 5rem 0 0; */
+  /* padding: 1rem; */
   display: flex;
+  justify-content: flex-start;
+  margin-right: 3rem;
+  gap: 5rem;
+  scroll-behavior: smooth;
 }
 
 nav ul li {
-  margin-left: 30px;
+  gap: 5rem;
 }
 
 nav ul li a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  padding: 5px 10px;
-  font-size: 39.81px;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  display: inline-block;
   transition: transform 0.5s;
-  /* transition: font-size 0.5s; */
-  /* TODO */
 }
 
 nav ul li a:hover {
   transform: scale(1.2);
-  /* font-size: 42px; */
-  /* transform + scale */
-  /* TODO */
+  color: #c000a1;
 }
 
-.wrap {
-  max-width: 1440px;
-  margin-top: 150px;
-  margin: 100 auto;
-  overflow-x: none;
-}
-.carousel {
-  display: flex;
-  font-size: 8rem;
-  font-weight: 600;
+body {
+  /* písmo prosím nastavit jen jednou, nejefektivnější je to v body */
   font-family: "Smooch Sans", sans-serif;
-  font-optical-sizing: auto;
-  animation: movement 10s linear infinite forwards;
+}
+
+.carousel-wrap {
+  margin-top: 150px;
+  /* klíč úspěchu je flex na samotném .carousel-wrapu -> texty, které jsou tam 2× vlastně seřadí do jedné liniea což povede k tomu, že neuvidíme přebliknutí, protože první .carousel se zařadí za druhý */
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  /* tohle je starší verze toho text-wrap co tam teď je, měřil jsem a bylo to GPU efektivnější */
+  white-space: nowrap;
+}
+
+.carousel-wrap:hover .carousel {
+  /* pro lepší UX po najetí myši zastavíme animaci */
+  animation-play-state: paused;
+}
+
+.carousel {
+  font-size: 7vw; /* možná by tady stálo za to zkusit vw místo rem, ale závisí */
+  font-weight: 600;
+  text-transform: uppercase; /* doporučuji z písma udělat verzálky pomocí CSS, kvůli čtečkám a Googlu je lepší, když místo LOGOS je logos, protože by to mohli chápat jako název společnosti a podobné. */
+  animation: movement 10s linear infinite;
 }
 
 .carousel span {
-  background-color: #ffffff;
   margin: 1rem;
   padding: 2rem;
-  text-wrap: nowrap;
-}
-
-.carousel {
-  display: flex;
-  font-size: 8rem;
-  font-weight: 600;
-  font-family: "Smooch Sans", sans-serif;
-  font-optical-sizing: auto;
-  animation: movement 10s linear infinite forwards;
 }
 
 @keyframes movement {
+  /* translate3D je v podstatě to samé jako translateX a Y a Z dohromady. Měřil jsem performance a bylo to pro tenhle projekt rychlejší než translateX. Je to drobnost, ale Google to bude řešit */
   from {
-    transform: translateX(100%);
+    transform: translate3d(0, 0, 0);
   }
-
   to {
-    transform: translateX(-100%);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 
@@ -109,7 +115,7 @@ nav ul li a:hover {
 .MainPic {
   width: 100%;
   height: auto;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 /* img {width: 100%;height: auto;} */
@@ -133,57 +139,101 @@ h1 {
   margin: 3rem;
   font-family: "Smooch Sans", sans-serif;
   font-optical-sizing: auto;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 800;
 }
 
 h2 {
   font-family: "Smooch Sans", sans-serif;
   font-optical-sizing: auto;
-  font-size: 47.78px;
-  font-weight: 200;
+  font-size: 3rem;
+  font-weight: 400;
   margin-left: 3rem;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+.text {
+  /* margin: 3rem; */
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  flex-wrap: nowrap;
+  font-size: 1.44rem;
+  gap: 3rem;
 }
 
 .AboutMe {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
   padding: 3rem;
+  margin: -2rem;
+  gap: 3rem;
 }
-.text {
-  margin: 3rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 
-  font-size: 33.18px;
+.ProfilePic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 3rem;
+  margin: -2rem;
+  gap: 3rem;
 }
+
 .MyPortfolio {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3rem;
+  background-color: #f8e1f4;
 }
 
 .MobApp {
   display: flex;
   justify-content: space-between;
-  margin: 1rem;
+  align-items: center;
+  flex-wrap: nowrap;
   padding: 3rem;
+  gap: 3rem;
 }
 
-.GymApp {
+/* .GymApp {
   margin-left: 3rem;
   height: 600px;
   width: auto;
   margin: 3rem;
+} */
+
+/* .image-container {
+  text-align: center;
+  margin-top: 50px;
+} */
+
+#image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3rem;
+  height: 400px;
+  width: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+#image.enlarged {
+  transform: scale(1.5);
 }
 
 footer {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-end;
   width: 100%;
   height: 440px;
   top: 0;
@@ -191,37 +241,56 @@ footer {
   background-color: #000000;
 }
 .Contact {
+  display: flex;
+  /* justify-content: flex-start; */
   color: rgb(255, 255, 255);
-  font-size: 27.65px;
+  font-size: 1.5rem;
   padding: 0;
-  margin-left: 3rem;
+  gap: 3rem;
 }
-
-a {
+.Email {
   color: #ffffff;
-  font-size: 3rem;
-  font-stretch: ultra-condensed;
+  font-family: "Smooch Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 4rem;
+  text-decoration: none;
+  padding: 3rem;
+  margin: 0;
 }
-a:hover {
+.Email:hover {
   color: #c000a1;
 }
 
+.Phone {
+  display: flex;
+  justify-content: flex-start;
+  color: rgb(255, 255, 255);
+  font-family: "Smooch Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 7rem;
+  font-style: ;
+  padding: 0 3rem;
+}
+
+.Address {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  font-family: "Smooch Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+  gap: rem;
+  margin-bottom: 4rem;
+  /* margin-left: 3rem; */
+}
+
 .LogoContact {
-  margin-top: 0.3rem;
-}
-
-.image-container {
-  text-align: center;
-  margin-top: 50px;
-}
-
-#image {
-  width: 300px;
-  height: auto;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-#image.enlarged {
-  transform: scale(2);
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  margin-left: 3.5rem;
 }
