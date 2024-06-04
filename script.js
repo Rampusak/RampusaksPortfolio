@@ -1,6 +1,6 @@
 window.addEventListener("scroll", function () {
   const header = document.getElementById("header");
-  if (window.scrollY > 50) {
+  if (window.scrollY > 10) {
     header.classList.add("small");
   } else {
     header.classList.remove("small");
