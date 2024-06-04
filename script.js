@@ -9,10 +9,10 @@ window.addEventListener("scroll", function () {
 
 function changeImage() {
   var image = document.getElementById("image");
-  if (image.src.match("original.png")) {
+  if (image.src.match("GymApp.png")) {
     image.src = "new-image.png";
   } else {
-    image.src = "original.png";
+    image.src = "GymApp.png";
   }
   image.classList.toggle("enlarged");
 }
