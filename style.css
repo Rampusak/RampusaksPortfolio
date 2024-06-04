@@ -22,7 +22,7 @@ header {
   box-shadow: 0 5px 10px #bbbaba;
   z-index: 1000;
   transition: all 0.3s ease;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 header.small {
@@ -95,7 +95,7 @@ body {
   font-size: 7vw; /* možná by tady stálo za to zkusit vw místo rem, ale závisí */
   font-weight: 600;
   text-transform: uppercase; /* doporučuji z písma udělat verzálky pomocí CSS, kvůli čtečkám a Googlu je lepší, když místo LOGOS je logos, protože by to mohli chápat jako název společnosti a podobné. */
-  animation: movement 10s linear infinite;
+  animation: movement 20s linear infinite;
 }
 
 .carousel span {
@@ -187,6 +187,7 @@ main {
   padding: 3rem;
   margin: -2rem;
   gap: 3rem;
+  /* box-shadow: 0 5px 10px #bbbaba; */
 }
 
 .MyPortfolio {
@@ -271,8 +272,32 @@ footer {
   font-family: "Smooch Sans", sans-serif;
   font-optical-sizing: auto;
   font-size: 7rem;
-  font-style: ;
   padding: 0 3rem;
+}
+
+.Linkedin {
+  display: inline-block;
+  justify-content: space-around;
+  align-items: center;
+  width: 2rem;
+  height: auto;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+.Instagram {
+  display: inline-block;
+  justify-content: space-around;
+  align-items: center;
+  width: 2rem;
+  height: auto;
+  margin-right: 1rem;
+}
+.Facebook {
+  display: inline-block;
+  justify-content: space-around;
+  align-items: center;
+  width: 2rem;
+  height: auto;
 }
 
 .Address {
