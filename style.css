@@ -230,6 +230,17 @@ main {
   cursor: pointer;
 }
 
+#vizitka {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3rem;
+  height: 400px;
+  width: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
 #image.enlarged {
   transform: scale(1.5);
 }
