@@ -16,3 +16,13 @@ function changeImage() {
   }
   image.classList.toggle("enlarged");
 }
+
+// function changeImage() {
+//   var image = document.getElementById("vizitka");
+//   if (image.src.match("Vizitka")) {
+//     image.src = "Vizitka";
+//   } else {
+//     image.src = "Vizitka";
+//   }
+//   image.classList.toggle("enlarged");
+// }
