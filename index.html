@@ -7,13 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Smooch+Sans:wght@100..900&display=swap"
       rel="stylesheet"
     />
@@ -21,14 +14,14 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-  <body>
+  <body id="top">
     <header id="header">
       <div class="MainLogo">
-        <a href="#header"
+        <a href="#top" title="Back to the top of the page"
           ><img
             src="MainLogo.png"
             alt="Hlavní logo DesignFactory"
-            class="MainLogo"
+            class="MainLogoImage"
         /></a>
       </div>
       <nav>
@@ -43,51 +36,67 @@
     <div class="carousel-wrap">
       <div class="carousel">
         <span>UX design</span><span>web sites</span><span>e-shops</span
-        ><span>web design</span><span>logos</span>
+        ><span>web design</span><span>corporate identity</span>
       </div>
 
       <div class="carousel">
         <span>UX design</span><span>web sites</span><span>e-shops</span
-        ><span>web design</span><span>logos</span>
+        ><span>web design</span><span>corporate identity</span>
       </div>
     </div>
-    <!-- <div class="MainPic"> -->
 
-    <img
-      src="MainPic.png"
-      alt="abstraktní fialová křivka v prostoru"
-      class="MainPic"
-    />
+    <div class="mainPicWrap">
+      <div class="mainPicOverlay"></div>
+      <img
+        src="MainPic.png"
+        alt="abstraktní fialová křivka v prostoru"
+        class="MainPic"
+      />
+    </div>
 
     <main>
-      <!-- </div> -->
-      <div class="AboutMe" id="about">
+      <div class="scrollToOffset" id="about"></div>
+      <div class="AboutMe">
         <img src="ProfilePic.png" alt="profilový obrázek" class="ProfilePic" />
-        <p class="text">
-          Hey there! I'm Jindrich, a UX designer with a unique twist. I started
-          my career in project management, where I honed my skills in
-          organization, strategy, and getting things done. After a while, I
-          realized my true passion lay in creating user-friendly and visually
-          appealing designs. So, I took the plunge and completed a retraining
-          course to dive deep into the world of UX/UI design.
-        </p>
+        <div class="AboutMeTexts">
+          <p class="text AboutMeTextsFirst">Hey there!</p>
+          <p class="text">
+            I'm <strong>Jindrich, a UX designer</strong> with a unique twist. I
+            started my career in project management, where I
+            <strong>honed my skills</strong> in organization, strategy, and
+            getting things done.
+          </p>
+        </div>
+        <div class="AboutMeTexts">
+          <p class="text">
+            After a while, I realized my <strong>true passion</strong> lay in
+            creating user-friendly and visually
+            <strong>appealing designs</strong>. So, I took the plunge and
+            completed a course to dive deep into the world of UX/UI design.
+          </p>
+        </div>
       </div>
-      <div class="MyPortfolio" id="services">
-        <h1>Let´s check out my projects</h1>
-        <p class="text">
-          In this section, you'll find a showcase of my journey to designing
-          intuitive user experiences. Take a look around to see my first steps
-          as a designer, mostly focused on web and mobile app design.
+      <div class="scrollToOffset" id="services"></div>
+      <div class="MyPortfolio">
+        <h1 class="MyPortfolioHeader">
+          Let´s check out my projects<span class="ornamental">!</span>
+        </h1>
+        <p class="text MyPortfolioSubText">
+          In this section, you'll find a
+          <strong>showcase of my journey</strong> to designing intuitive user
+          experiences. Take a look around to see my first steps as a designer,
+          mostly focused on web and mobile app design.
         </p>
         <!-- <img src="LogoContact.png" alt="profilový obrázek" /> -->
       </div>
       <div class="MobApp">
         <h1>Booking App</h1>
         <p class="text">
-          Check out new mobile app design that makes booking anything a breeze,
-          from restaurants and events to climbing gym classes and more. It's got
-          a fresh, simple design that's super easy to use, so you can find and
-          reserve what you need in no time.
+          Check out new <strong>mobile app design</strong> that makes booking
+          anything a breeze, from restaurants and events to climbing gym classes
+          and more. It's got a <strong>fresh, simple</strong> design that's
+          <strong>super easy to use</strong>, so you can find and reserve what
+          you need in no time.
         </p>
         <img
           src="GymApp.png"
@@ -104,7 +113,12 @@
           class="Vizitka"
           id="vizitka"
         />
-        <p class="text"> Enhance your business relationships with personalized business cards. We offer custom designs, both paper and digital solution, featuring a fresh, simple look that impresses. Optional QR codes for easy contact sharing.
+        <p class="text">
+          Enhance your business relationships with
+          <strong>personalized business cards</strong>. We offer custom designs,
+          both paper and digital solution, featuring a fresh, simple look that
+          impresses. Optional <strong>QR codes</strong> for easy contact
+          sharing.
         </p>
       </div>
       <div class="MobApp">
@@ -115,12 +129,23 @@
           reserve what you need in no time.
         </p>
         <img
-          src="GymApp.png"
+          src="MusicLab.png"
           alt="aplikace pro rezervaci výuky lekcí sportovního lezení"
           class="GymApp"
           id="image"
           onclick="changeImage()"
         />
+      </div>
+      <div>
+        <p class="text">
+          Transform your business with our
+          <strong>professional web and e-commerce development services</strong>.
+          We specialize in creating <strong>modern, clean designs</strong>
+          that ensure an intuitive user experience. Let us help you build a
+          stunning online presence that attracts and retains customers
+          effortlessly.
+        </p>
+        <img src="Website.png" alt="eshop s cyklovybavením" class="Website" />
       </div>
     </main>
 
@@ -135,30 +160,36 @@
 
     <footer>
       <div class="Contact" id="contact">
-        <div>
-          <h2>Contact Me:</h2>
+        <div class="ContactLeft">
+          <h2 class="ContactHeader">Contact me</h2>
           <a href="mailto:jindrich.rampas@gmail.com" class="Email"
             >JINDRICH.RAMPAS@GMAIL.COM</a
           >
-          <div class="Phone">+420 728 720 696</div>
+          <a href="tel:00420728720696" class="Phone">+420 728 720 696</a>
         </div>
         <div class="Address">
           <p>BRNO</p>
           <p>CZECH REPUBLIC</p>
-          <div>
-            <a href="https://www.linkedin.com/in/jindrichrampas/"
+          <div class="AddressSocials">
+            <a
+              href="https://www.linkedin.com/in/jindrichrampas/"
+              title="Add me on Linkedin"
               ><img
                 src="Linkedin.png"
                 alt="odkaz na sociální síť Linkedin"
                 class="Linkedin"
             /></a>
-            <a href="https://www.instagram.com/jindrich.rampas/"
+            <a
+              href="https://www.instagram.com/jindrich.rampas/"
+              title="Follow me on Instagram"
               ><img
                 src="Instagram.png"
                 alt="odkaz na sociální síť Instagram"
                 class="Instagram"
             /></a>
-            <a href="https://www.facebook.com/jindrich.rampass"
+            <a
+              href="https://www.facebook.com/jindrich.rampass"
+              title="Add me on Facebook"
               ><img
                 src="Facebook.png"
                 alt="odkaz na sociální síť Facebook"
@@ -167,7 +198,7 @@
           </div>
         </div>
         <img src="LogoContact.png" alt="vertikální logo" class="LogoContact" />
+      </div>
     </footer>
-  </div>
   </body>
 </html>
