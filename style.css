@@ -437,7 +437,7 @@ main {
   font-size: 2rem;
 }
 
-.Website {
+#Website {
   display: flex;
   justify-content: space-between;
   margin-left: auto;
@@ -609,4 +609,5 @@ footer {
 .LogoContact {
   justify-self: flex-end;
   margin-bottom: -1rem;
+  /* margin-right: -5rem; */
 }
