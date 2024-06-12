@@ -285,39 +285,118 @@ main {
 
 .MobApp {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 3rem;
-  gap: 0rem;
+  /* padding: 3rem; */
+  padding: 7rem 3rem;
+  /* margin: -2rem; */
+  gap: 3rem;
 }
 
-#GymApp {
-  margin-right: -2rem;
-}
-
-.Vizitka {
-  width: 400px;
-  height: auto;
+/* .MobApp {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
   padding: 3rem;
   gap: 0rem;
+} */
+
+.MobAppTexts .text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+  max-width: 60ex;
+  line-height: 1.4;
+  font-weight: 300;
 }
 
-/* .GymApp {
-  margin-left: 3rem;
-  height: 600px;
-  width: auto;
-  margin: 3rem;
+.MobAppTextFirst {
+  font-size: 2rem;
+}
+
+.GymApp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 3rem;
+  margin-left: 8rem;
+  gap: 3rem;
+  margin-bottom: -7rem;
+  /* box-shadow: 0 5px 10px #bbbaba; */
+}
+
+.MusicLabTexts .text {
+  padding: 0;
+  margin-left: -3rem;
+  margin-bottom: 1rem;
+  max-width: 60ex;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.MusicLabPic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 3rem;
+  margin: -1rem;
+  gap: 3rem;
+  /* box-shadow: 0 5px 10px #bbbaba; */
+}
+/* 
+{
+  margin-right: -2rem;
+} */
+.BussinesCard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  /* padding: 3rem; */
+  padding: 3rem 3rem;
+  /* margin: -2rem; */
+  gap: 3rem;
+}
+
+/* .BussinesCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 3rem;
+  padding: 5rem 5rem;
+  margin: -2rem;
+  gap: 3rem;
 } */
 
-/* .image-container {
-  text-align: center;
-  margin-top: 50px;
-} */
+.BussinesCardTexts .text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+  max-width: 40ex;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.BussinesCardTextFirst {
+  font-size: 2rem;
+}
+
+.Vizitka {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  /* width: 400px;
+  height: auto; */
+  padding: 3rem;
+  margin: 2rem;
+  gap: 3rem;
+}
 
 #image {
   display: flex;
@@ -330,33 +409,45 @@ main {
   cursor: pointer;
 }
 
-/* #vizitka {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 3rem;
-  height: 400px;
-  width: auto;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-} */
-
 #image.enlarged {
   transform: scale(1.5);
 }
 
+.E-shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  /* padding: 3rem; */
+  padding: 7rem 3rem;
+  /* margin: -2rem; */
+  gap: -3rem;
+}
+
+.E-shopTexts .text {
+  padding: 0;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+  max-width: 40ex;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.E-shopTextFirst {
+  font-size: 2rem;
+}
+
 .Website {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  /* width: 50%; */
   flex-wrap: nowrap;
-  width: 60%;
-  /* padding: 3rem; */
+  width: 80%;
+  padding: -3rem;
   gap: 3rem;
-  box-shadow: 6px 7px 23px -3px rgba(0, 0, 0, 0.9);
-  -webkit-box-shadow: 6px 7px 23px -3px rgba(0, 0, 0, 0.9);
-  -moz-box-shadow: 6px 7px 23px -3px rgba(0, 0, 0, 0.9);
+  box-shadow: var(--shadow);
   margin-bottom: 3rem;
 }
 
