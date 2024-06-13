@@ -391,7 +391,7 @@ main {
   justify-content: flex-end;
   align-items: center;
   flex-wrap: nowrap;
-  /* width: 400px;
+  /* max-width: 40px;
   height: auto; */
   padding: 3rem;
   margin: 2rem;
